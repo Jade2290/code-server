@@ -406,7 +406,6 @@ export class ExtensionsViewPaneContainer extends ViewPaneContainer implements IE
 		this.root = parent;
 
 		const overlay = append(this.root, $('.overlay'));
-
 		const overlayBackgroundColor = this.getColor(SIDE_BAR_DRAG_AND_DROP_BACKGROUND) ?? '';
 		overlay.style.backgroundColor = overlayBackgroundColor;
 		hide(overlay);
@@ -438,8 +437,7 @@ export class ExtensionsViewPaneContainer extends ViewPaneContainer implements IE
 			dismiss.style.textAlign = 'right';
 			dismiss.style.cursor = 'pointer';
 			dismiss.onclick = () => {
-				// Eventually removes helperHeader from DOM
-				setTimeout(() => helperHeader.remove());
+				helperHeader.remove();
 				localStorage.setItem(extensionHelperLocalStorageKey, 'viewed');
 			};
 		}
