@@ -439,7 +439,7 @@ export class ExtensionsViewPaneContainer extends ViewPaneContainer implements IE
 			dismiss.style.cursor = 'pointer';
 			dismiss.onclick = () => {
 				// Eventually removes helperHeader from DOM
-				setTimeout(() => this.root?.removeChild(helperHeader));
+				setTimeout(() => helperHeader.remove());
 				localStorage.setItem(extensionHelperLocalStorageKey, 'viewed');
 			};
 		}
