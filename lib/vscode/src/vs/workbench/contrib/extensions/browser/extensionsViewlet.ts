@@ -424,7 +424,7 @@ export class ExtensionsViewPaneContainer extends ViewPaneContainer implements IE
 			<div style="margin-bottom: 8px;">
 			<p style="margin-bottom: 0; display: flex; align-items: center"><span class="codicon codicon-warning" style="margin-right: 2px; color: #C4A103"></span>WARNING</p>
 			<p style="margin-top: 0; margin-bottom: 4px">
-			These extensions are not official. Find open-source extensions
+			These extensions are not official. Find additional open-source extensions
 			<a href="https://open-vsx.org/" target="_blank">here</a>.
 			See <a href="https://github.com/cdr/code-server/blob/master/doc/FAQ.md#differences-compared-to-vs-code" target="_blank">docs</a>.
 			</p>
