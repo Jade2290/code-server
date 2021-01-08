@@ -1,7 +1,6 @@
 import { logger } from "@coder/logger"
 import * as express from "express"
 import * as fs from "fs"
-import { describe } from "mocha"
 import * as path from "path"
 import * as supertest from "supertest"
 import { PluginAPI } from "../src/node/plugin"
@@ -16,12 +15,12 @@ describe("plugin", () => {
   let app: express.Application
   let agent: supertest.SuperAgentTest
 
-  before(async () => {
+  beforeAll(async () => {
     papi = new PluginAPI(logger, path.resolve(__dirname, "test-plugin") + ":meow")
     await papi.loadPlugins()
 
     app = express.default()
-    papi.mount(app)
+    papi.mount(app)     
 
     app.use("/api/applications", apps.router(papi))
 
